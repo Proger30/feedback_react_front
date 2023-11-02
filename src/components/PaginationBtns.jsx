@@ -7,7 +7,7 @@ function PaginationBtns({pages, getLinks}) {
 
 	const onGetLinks = (url) => {
 		setLoading(true);
-		getLinks(url, false)
+		getLinks(url, false, true)
 	};
 
 		// test render

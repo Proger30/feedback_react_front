@@ -31,9 +31,9 @@ function TableLayout() {
 			});
 	}
 
-	const getData = (link=location, isResetTableData=true) => {
+	const getData = (link=location, isResetTableData=true, isPageLink=false) => {
 		isResetTableData && setData([]);
-		let URL = `${link}?filter=${filter}`;
+		let URL = `${link}${isPageLink ? '&' : '?'}filter=${filter}`;
 		URL = search === "" ? URL : `${URL}&search=${search}`;
 		axiosClient.get(URL)
 		.then(({data}) => {
