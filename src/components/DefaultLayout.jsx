@@ -36,8 +36,8 @@ function DefaultLayout() {
 
 	// eslint-disable-next-line
 	useEffect(() => {
-		// user.id && toggleCanCreateFeedback(new Date(user.last_feedback_created).getTime() + 0 <= new Date().getTime());
-		toggleCanCreateFeedback(true);
+		user.id && toggleCanCreateFeedback(new Date(user.last_feedback_created).getTime() + 0 <= new Date().getTime());
+		// toggleCanCreateFeedback(true);
 		// eslint-disable-next-line
 	}, [user]);
 
