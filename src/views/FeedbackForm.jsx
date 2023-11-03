@@ -177,7 +177,7 @@ const FeedbackInfoView = ({feedback, loading, isSubmited }) => {
 			<p className='mb'>{feedback.created_at}</p>
 			{feedback.file && feedback.file !== "" && 
 				<>
-					<p>В проде скачивание не работает, по той причине что я задеплойи в railway.app, а тут хранилищя не предоставляются( Но функционал рабочий, можете развернуть приложение у себя и убедится!</p>
+					<p className="mb-5">В проде скачивание не работает, по той причине что я задеплойи в railway.app, а тут хранилищя не предоставляются( <br /> Но функционал рабочий, можете развернуть приложение у себя и убедится!</p>
 					<a className='btn btn-add attachedFile' href={import.meta.env.VITE_BASE_URL + feedback.file.replace("public/", "storage/")} target='_blank' rel="noreferrer">Attached image</a>
 				</>
 			}
